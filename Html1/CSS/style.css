@@ -1,0 +1,28 @@
+body {
+  background-color: #f3f3f1;
+}
+.content {
+  width: 500px;
+  margin: auto;
+  background-color: inherit;
+}
+h1 {
+  text-align: center;
+}
+span {
+  color:505050;
+  padding-left: 3px;
+}
+p, a {
+  padding-left: 35px;
+}
+a {
+  font-style: italic;
+}
+img {
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
