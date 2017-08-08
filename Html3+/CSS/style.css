@@ -1,0 +1,47 @@
+body {
+  background: #838383;
+  font-family: "Tahoma", sans-serif;
+  font-size: 0.5259em;
+  color: #e6e6e6;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
+  padding: 55px 70px 30px;
+  box-sizing: border-box;
+  background: url('../img/background.jpg') no-repeat;
+}
+img {
+  height: 200px;
+  width: 265px;
+}
+header,
+main,
+footer {
+  display: flex;
+}
+header img {
+  height: 150px;
+}
+header {
+  width: 820px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+p {
+  padding: 15px;
+}
+span {
+  font-size: 0.635em;
+}
+main {
+  margin-bottom: 180px;
+  width: 820px;
+  height: 452px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+footer {
+  justify-content: center;
+}
