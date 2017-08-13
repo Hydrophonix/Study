@@ -1,0 +1,16 @@
+body {
+
+}
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1215px;
+}
+header {
+  height: 36px;
+  background: url('../img/bgh.png') no-repeat;
+}
+main {
+  height: 1028px;
+  background: url('../img/bgm.jpg') no-repeat;
+}
