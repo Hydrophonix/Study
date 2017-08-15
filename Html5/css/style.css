@@ -1,16 +1,159 @@
+@font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('../fonts/helveticaneue-thin-webfont.eot');
+    src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-thin-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-
+  font-family: 'Helvetica Neue Regular', Tahoma, sans-serif;
+  font-size: 14px;
+}
+strong {
+  font-weight: bold;
 }
 .wrapper {
   margin-left: auto;
   margin-right: auto;
   width: 1215px;
 }
-header {
+.page__header {
+  display: flex;
+  justify-content: flex-end;
   height: 36px;
+  padding-right: 14px;
   background: url('../img/bgh.png') no-repeat;
 }
+nav {
+  padding: 0 6px;
+}
+nav ul {
+  display: flex;
+}
+nav ul a {
+  display: block;
+  padding: 0 14px;
+  color: #60b5ed;
+  line-height: 36px;
+  text-decoration: none;
+}
+.nav__menu__link:hover {
+  background-color: #4eabda;
+  color: white;
+}
+.nav__login__link {
+  color: #fefefe;
+}
+.nav__login__link:hover {
+  background: linear-gradient(to bottom, rgba(101,168,228,1) 0%,rgba(68,153,211,1) 97%,rgba(67,153,210,0.59) 100%);
+}
+.flag__link {
+  padding-left: 45px;
+  position: relative;
+}
+.nav__login__flag {
+  position: absolute;
+  top: 7px;
+  left: 13px;
+}
+.login span {
+  text-decoration: underline;
+}
+.header__line {
+  width: 1px;
+  height: 36px;
+  padding-top: 2px;
+}
+.line {
+  width: 1px;
+  height: 31px;
+  fill: #56a2dc;
+}
 main {
+  display: flex;
   height: 1028px;
+  justify-content: center;
+  align-items: center;
   background: url('../img/bgm.jpg') no-repeat;
+}
+.reg__header {
+  width: 560px;
+  height: 62px;
+  margin-bottom: 3px;
+  background-color: rgba(0, 0, 0, 0.63);
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  line-height: 62px;
+}
+.reg__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36px;
+  width: 560px;
+  height: 549px;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+.facebook__login {
+  margin-bottom: 30px;
+}
+fieldset {
+  border-top: 2px solid black;
+}
+legend {
+  text-align: center;
+  padding: 0 3px;
+  margin-bottom: 30px;
+  color: #999999;
+}
+.input__field {
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  width: 256px;
+  height: 35px;
+  line-height: 35px;
+  color: #cccccc;
+  background-color: #0f0f0f;
+  border: none;
+  border-bottom: 1px solid #494949;
+}
+.input__field::placeholder {
+  color: #cccccc;
+}
+.input__field:hover {
+  color: white;
+  background-color: #1b5288;
+  box-shadow: 0px 0px 7px 1px rgba(91,152,163,1);
+}
+.input__field:hover::placeholder {
+  color: white;
+}
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+form span {
+  padding-left: 5px;
+  color: #cccccc;
+}
+.reg__footer {
+  text-align: center;
+  color: #cccccc;
+}
+.submit__button {
+  display: block;
+  margin: 0 auto 20px;
+  width: 150px;
+  height: 36px;
+  line-height: 36px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #47a1d5;
 }

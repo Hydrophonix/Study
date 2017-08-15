@@ -8,15 +8,62 @@
 </head>
 <body>
   <div class="wrapper">
-    <header>
-div.menu.nav__menu>ul.
+    <header class="page__header">
+      <nav class="menu">
+        <ul class="nav__menu">
+          <li><a href="#" class="nav__menu__link">Meu YouBike</a></li>
+          <li><a href="#" class="nav__menu__link">Vender</a></li>
+          <li><a href="#" class="nav__menu__link">Forum</a></li>
+          <li><a href="#" class="nav__menu__link">Contato</a></li>
+          <li><a href="#" class="nav__menu__link">Ajuda</a></li>
+        </ul>
+      </nav>
+      <svg class="header__line">
+        <rect class="line">
+      </svg>
+      <nav class="login">
+        <ul class="nav__login">
+          <li>
+            <a href="#" class="nav__login__link flag__link">
+              <img class="nav__login__flag" src="img/flag.png" alt="Minhas Ofertas">
+              Minhas Ofertas
+            </a>
+          </li>
+          <li><a href="#" class="nav__login__link">Ola! <span>Entrar</span> ou <span>Cadastre-se</span></a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-11
+      <div class="registration">
+        <header class="reg__header">
+          <span>Cadastre-se<span>
+        </header>
+        <div class="reg__container">
+          <a href="#" class="facebook__login">
+            <img src="img/fb.png" alt="Facebook" class="facebook__logo">
+          </a>
+          <form class="reg" action="index.html" method="post">
+            <fieldset>
+              <legend>OU</legend>
+              <input type="text" class="input__field" placeholder="First Name" required>
+              <input type="text" class="input__field" placeholder="Last Name" required>
+              <input type="email" class="input__field" placeholder="Email Address" required>
+              <input type="password" class="input__field" placeholder="Choose Password" required>
+              <input type="password" class="input__field" placeholder="Password Confirm" required>
+              <label>
+                <input type="checkbox" class="checkbox">
+                <span>Send me Youbike updates and tips</span>
+              </label>
+            </fieldset>
+          <input type="submit" class="submit__button" value="Create My Account">
+          </form>
+          <footer class="reg__footer">
+            <p>By clicking the button above, you agree to the Terms of Service <br>
+               Xiew our Privacy Policy</p>
+          </footer>
+        </div>
+      </div>
     </main>
-    <footer>
-
-    </footer>
   </div>
 </body>
 </html>
