@@ -1,0 +1,27 @@
+body {
+
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 910px;
+}
+
+
+
+ul {
+  list-style: circle;
+  list-style-position: inside;
+  color: red;
+
+
+}
+main {
+  padding: 100px;
+}
+ul > li > ul > li {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+}
