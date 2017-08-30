@@ -1,15 +1,158 @@
 body {
-
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+    letter-spacing: .5px;
 }
 
 .wrapper {
     margin: 0 auto;
     width: 910px;
+    display: grid;
+    grid-template: 292px 52px auto 191px / 237px auto 237px;
+    grid-template-areas: "h h h"
+                         "n n n"
+                         "a b c"
+                         "f f f"
+}
+
+                /*HEADER*/
+header {
+    grid-area: h;
+}
+
+.top__header {
+    display: flex;
+    padding-top: 17px;
+    margin-bottom: 11px;
+}
+
+.contact__phone {
+    display: flex;
+    box-sizing: border-box;
+    width: 314px;
+    padding: 0 15px 0 7px;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #5e696d;
+}
+
+.contact__phone > p {
+    padding-bottom: 1px;
+}
+
+.login__menu {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin-right: 16px;
+    width: 495px;
+    height: 26px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, rgba(32,105,136,1) 0%,rgba(28,94,126,1) 21%,rgba(18,67,102,1) 58%,rgba(12,51,87,1) 100%);
+    box-shadow: 1px 2px 3px 1px rgba(185,185,185,1);
+}
+.man__icon {
+    box-sizing: border-box;
+    padding: 5px 3px 3px 7px;
+}
+.login {
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+.login > input {
+    box-sizing: border-box;
+    width: 114px;
+    height: 17px;
+    margin-right: 7px;
+    padding-left: 4px;
+    font-size: 11px;
+}
+
+.login > input::placeholder  {
+    color: #97a2a6;
+    letter-spacing: .5px;
+}
+
+.enter__button,
+.registration,
+.line {
+    font-size: 11px;
+    color: white;
+}
+
+.enter__button {
+    padding: 0;
+    padding-left: 1px;
+    border: none;
+    background: inherit;
+    font-variant: small-caps;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.line {
+    padding: 7px 3px;
+}
+
+.registration {
+    line-height: 26px;
+    letter-spacing: -.3px;
+    text-decoration: none;
+}
+
+.pass__forgot {
+    box-sizing: border-box;
+    padding: 6px 0 0 21px;
+    font-size: 12px;
+    letter-spacing: -.3px;
+    color: #bfbfbf;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    height: 22px;
+    width: 78px;
+    border: 1px solid #c1c8cb;
+    border-radius: 15px;
+    box-shadow: 0px 1px 3px 0px rgba(202,207,210,1);
+}
+
+                /*NAV*/
+.main {
+    grid-area: n;
+    padding-top: 5px;
+}
+.main__menu {
+    display: flex;
+    background: linear-gradient(to bottom, rgba(87,96,104,0.87) 0%,rgba(80,88,96,1) 3%,rgba(70,77,84,1) 6%,rgba(45,50,54,1) 13%,rgba(42,46,50,1) 16%,rgba(19,21,23,1) 55%,rgba(7,8,9,1) 81%,rgba(1,1,1,1) 100%);
+    border: 1px solid #0d1642;
+    border-radius: 5px;
+}
+                /*ASIDE LEFT*/
+.catalog {
+    grid-area: a;
+}
+                /*MAIN*/
+main {
+    grid-area: b;
+}
+                /*ASIDE RIGHT*/
+.brands {
+    grid-area: c;
+}
+                /*FOOTER*/
+footer {
+    grid-area: f;
 }
 
 
-
 ul {
+    display: flex;
   list-style: circle;
   list-style-position: inside;
   color: red;
