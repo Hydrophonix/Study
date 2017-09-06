@@ -1,20 +1,23 @@
 body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
-    letter-spacing: .5px;
 }
 
 .wrapper {
     margin: 0 auto;
     width: 910px;
     display: grid;
-    grid-template: 292px 52px auto 191px / 237px auto 237px;
+    grid-template: 292px 52px 150px auto 191px / 190px auto 190px;
     grid-template-areas: "h h h"
                          "n n n"
+                         "s s s"
                          "a b c"
                          "f f f"
 }
 
+
                 /*HEADER*/
+
+
 header {
     grid-area: h;
 }
@@ -23,6 +26,7 @@ header {
     display: flex;
     padding-top: 17px;
     margin-bottom: 11px;
+    letter-spacing: .5px;
 }
 
 .contact__phone {
@@ -122,49 +126,419 @@ header {
     box-shadow: 0px 1px 3px 0px rgba(202,207,210,1);
 }
 
+
                 /*NAV*/
+
+
 .main {
     grid-area: n;
     padding-top: 5px;
 }
+
 .main__menu {
+    height: 34px;
     display: flex;
+    align-items: center;
+    padding-left: 125px;
     background: linear-gradient(to bottom, rgba(87,96,104,0.87) 0%,rgba(80,88,96,1) 3%,rgba(70,77,84,1) 6%,rgba(45,50,54,1) 13%,rgba(42,46,50,1) 16%,rgba(19,21,23,1) 55%,rgba(7,8,9,1) 81%,rgba(1,1,1,1) 100%);
     border: 1px solid #0d1642;
     border-radius: 5px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
+
+.main__menu ul {
+    display: flex;
+    list-style: none;
+    margin-right: 50px;
+}
+
+.nav__link {
+    padding-left: 20px;
+    padding-right: 15px;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #b1bcc0;
+}
+
+.nav__link:hover {
+    background: linear-gradient(to bottom, rgba(32,105,136,1) 0%,rgba(30,99,131,1) 13%,rgba(17,65,101,1) 61%,rgba(12,51,87,1) 100%);
+    border-radius: 13px;
+    color: white;
+}
+
+.bucket {
+    display: flex;
+    align-items: center;
+}
+
+.bucket a {
+    margin-right: 5px;
+}
+
+.bucket p {
+    font: 11px Arial sans-serif;
+    color: #929b9f;
+}
+
+.bucket span {
+    font-size: 12px;
+    color: #0d5a8f;
+}
+
+                /*SEARCH NAV*/
+
+
+.search__menu {
+    grid-area: s;
+    padding: 0 5px 15px;
+    display: flex;
+}
+
+.car__searсh,
+.tires__searсh,
+.rims__searсh {
+    box-sizing: border-box;
+    border: 1px solid #9c9c9d;
+    border-radius: 17px;
+    box-shadow: 2.6px 4.3px 5px rgba(104, 104, 104, .75);
+
+}
+
+.car__searсh {
+    margin-right: 15px;
+    width: 415px;
+    padding: 0 15px;
+}
+
+.car__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.search__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font: bold 10px Arial sans-serif;
+    color: #154467;
+}
+
+.search__header h1 {
+    font-size: 12px;
+}
+.left__car {
+    margin-right: 33px;
+}
+.car__select {
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+}
+
+.car__select p {
+    width: 75px;
+    font: 11px Arial sans-serif;
+    line-height: 9px;
+    letter-spacing: .4px;
+}
+
+.car__select span {
+    font-size: 9px;
+    color: #77858b;
+}
+
+.car__select select {
+    width: 100px;
+    box-shadow: inset 0.5px 0.9px 1px rgba(0, 0, 0, 0.75);
+}
+
+.car__select .select__year {
+    width: 60px;
+}
+
+.search__button {
+    font: small-caps italic 14px Arial sans-serif;
+    text-decoration: underline;
+    border: none;
+    background: inherit;
+    color: #154467;
+}
+
+.tires__searсh {
+    width: 190px;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 11px;
+}
+
+.tires__form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.tires__select {
+    display: flex;
+    align-items: baseline;
+    padding: 1px 20px 1px 0;
+}
+
+.tires__select p {
+    width: 50px;
+}
+
+.tires__select select {
+    box-shadow: inset 0.5px 0.9px 1px rgba(0, 0, 0, 0.75);
+}
+
+.seasons {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.seasons input {
+    margin: 0 3px 3px 0;
+    box-shadow: inset 0.5px 0.9px 1px rgba(0, 0, 0, 0.75);
+}
+
+.rims__searсh {
+    width: 270px;
+    padding: 0 10px;
+}
+
+.rims__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.left__fieldset {
+    margin-right: 15px;
+}
+
+.rims__select {
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    line-height: 8px;
+}
+.rims__select p {
+    padding-left: 6px;
+    width: 90px;
+    font-size: 10px;
+}
+
+.rims__select span {
+    font-size: 9px;
+    color: #77858b;
+}
+
+.right__fieldset {
+    margin: 5px 20px 0 0;
+    padding: 0 10px;
+    border-left: 1px solid #7789bb;
+    line-height: 7px;
+}
+
+.right__fieldset p {
+    font-size: 9px;
+}
+
+.right__fieldset span {
+    font-size: 8px;
+    color: #77858b;
+}
+
+.right__fieldset select {
+    margin: 6px 0;
+}
+
+
                 /*ASIDE LEFT*/
+
+
 .catalog {
     grid-area: a;
 }
+
+.catalog__header,
+.brands__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 2px;
+    height: 25px;
+    width: 180px;
+    border: 1px solid #8b979c;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #114165;
+    box-shadow: 1px 1px 2px 1px rgba(150, 150, 150, .50);
+}
+
+.catalog__header p,
+.brands__header p {
+    padding-left: 3px;
+    text-transform: uppercase;
+}
+
+.catalog h1,
+.brands h1 {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    width: 150px;
+    padding-left: 3px;
+    font-size: 14px;
+    text-transform: uppercase;;
+    color: #114165;
+    border: 1px solid #8b979c;
+    border-radius: 14px;
+}
+
+.catalog section img,
+.brands section img {
+    margin-right: 3px;
+}
+.catalog  ul {
+    padding-left: 45px;
+    list-style: circle;
+    color: #114165;
+}
+
+.catalog a,
+.brands label {
+    display: block;
+    padding: 6px 0;
+    text-decoration: none;
+    font-size: 13px;
+    color: #114165;
+}
+
+.catalog a:hover {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
                 /*MAIN*/
+
+
 main {
     grid-area: b;
+    background: linear-gradient(to top, rgba(35, 75, 93, 0.49) 0%, rgba(201, 207, 209, 0.49) 100%);
+    border-radius: 3px;
+    padding: 15px 30px 5px 25px;
 }
+
+.items__container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.items {
+    text-align: center;
+}
+
+.items h1 {
+    font-size: 15px;
+    color: #206988;
+    line-height: 7px;
+}
+
+.items span {
+    font-size: 13px;
+}
+
+.img__cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    height: 130px;
+    border: 1px solid #a7b1b4;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.items figcaption {
+    font: bold italic 16px Arial sans-serif;
+    color: #114165;
+}
+
+
                 /*ASIDE RIGHT*/
+
+
 .brands {
     grid-area: c;
+    padding-left: 5px;
 }
+
+.brands section {
+    padding-left: 15px;
+}
+
+.brands input {
+    margin-right: 10px;
+}
+
+.brands button {
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 5px 15px;
+    background: linear-gradient(to bottom, rgba(32,105,136,1) 0%,rgba(30,99,131,1) 13%,rgba(17,65,101,1) 61%,rgba(12,51,87,1) 100%);
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 11px;
+    box-shadow: 1px 1px 2px 1px rgba(150, 150, 150, .50);
+}
+
+
                 /*FOOTER*/
+
+
 footer {
     grid-area: f;
 }
 
-
-ul {
-    display: flex;
-  list-style: circle;
-  list-style-position: inside;
-  color: red;
-
-
+.footer__logos {
+    text-align: center;
+    padding-top: 39px;
+    padding-bottom: 25px;
 }
-main {
-  padding: 100px;
+
+.footer__main {
+    box-sizing: border-box;
+    height: 100px;
+    padding-top: 10px;
+    background-color: #213a4d;
+    text-align: center;
 }
-ul > li > ul > li {
-  border: 1px solid black;
-  margin-bottom: 10px;
-  padding: 0 10px;
-  border-radius: 10px;
+
+ .footer__links a,
+ .footer__links span  {
+     text-decoration: none;
+     font: 12px Arial sans-serif;
+     color: #bec6c9;
+ }
+
+.footer__links a:hover {
+    color: #52abcb;
+}
+
+.footer__main p {
+    margin-top: 10px;
+    font: 12px Arial sans-serif;
+    color: #7f4740;
 }
