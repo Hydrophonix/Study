@@ -197,9 +197,9 @@ header {
     display: flex;
 }
 
-.car__searсh,
-.tires__searсh,
-.rims__searсh {
+.car__search,
+.tires__search,
+.rims__search {
     box-sizing: border-box;
     border: 1px solid #9c9c9d;
     border-radius: 17px;
@@ -207,7 +207,7 @@ header {
 
 }
 
-.car__searсh {
+.car__search {
     margin-right: 15px;
     width: 415px;
     padding: 0 15px;
@@ -228,7 +228,7 @@ header {
     color: #154467;
 }
 
-.search__header h1 {
+.search__header h2 {
     font-size: 12px;
 }
 .left__car {
@@ -269,7 +269,7 @@ header {
     color: #154467;
 }
 
-.tires__searсh {
+.tires__search {
     width: 190px;
     margin-right: 10px;
     padding: 0 10px;
@@ -307,7 +307,7 @@ header {
     box-shadow: inset 0.5px 0.9px 1px rgba(0, 0, 0, 0.75);
 }
 
-.rims__searсh {
+.rims__search {
     width: 270px;
     padding: 0 10px;
 }
@@ -340,7 +340,7 @@ header {
 }
 
 .right__fieldset {
-    margin: 5px 20px 0 0;
+    margin: 5px 10px 0 0;
     padding: 0 10px;
     border-left: 1px solid #7789bb;
     line-height: 7px;
@@ -388,8 +388,8 @@ header {
     text-transform: uppercase;
 }
 
-.catalog h1,
-.brands h1 {
+.catalog h2,
+.brands h2 {
     display: flex;
     align-items: center;
     height: 26px;
@@ -448,7 +448,7 @@ main {
     text-align: center;
 }
 
-.items h1 {
+.items h2 {
     font-size: 15px;
     color: #206988;
     line-height: 7px;
