@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100%;
+}
+header {
+    width: 960px;
+    margin: 0 auto;
+}
+.header__text {
+    display: block;
+}
+.menu {
+    display: flex;
+}
