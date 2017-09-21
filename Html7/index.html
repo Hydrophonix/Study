@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header__container wrapper">
-        <header>
-            <div class="header__top">
+    <header>
+        <div class="header__container">
+            <div class="header__top wrapper">
                 <a href="#" class="header__text">pingbull<span>er</span></a>
                 <nav class="header__nav">
                     <ul class="menu">
@@ -22,17 +22,21 @@
                     </ul>
                 </nav>
             </div>
-            <div class="header__middle">
-                <section class="header__section">
-                    <h1>lorem ipsum dolor</h1>
-                    <h2>it will make all of your dreams come true</h2>
-                    <p>Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est,
-                        et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper.
-                        In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla </p>
-                </section>
-                <img src="" alt="iPhone4">
+            <div class="headermid__container">
+                <div class="header__middle wrapper">
+                    <section class="header__section">
+                        <h1>lorem ipsum dolor</h1>
+                        <h2>it will make all of your dreams come true</h2>
+                        <p>
+                            Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est,
+                            et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper.
+                            In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla
+                        </p>
+                    </section>
+                    <img src="img/iphone.png" alt="iPhone4">
+                </div>
             </div>
-            <div class="header__bottom">
+            <div class="header__bottom wrapper">
                 <form class="" action="index.html" method="post">
                     <input type="radio" name="slider1" value="1">
                     <input type="radio" name="slider1" value="2">
@@ -40,42 +44,50 @@
                     <input type="radio" name="slider1" value="4">
                 </form>
             </div>
-        </header>
-    </div>
-    <div class="about__container wrapper">
-        <div class="about">
-            <article class="about__atricle">
-                <img src="" alt="wrench">
-                <h2>about our company</h2>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel
-                    lacus eget nisi convallis auctor. Nam vitae lectus </p>
-                <span>read more</span>
-            </article>
-            <article class="about__atricle">
-                <img src="" alt="chat">
-                <h2>about our company</h2>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel
-                    lacus eget nisi convallis auctor. Nam vitae lectus </p>
-                <span>read more</span>
-            </article>
-            <article class="about__atricle">
-                <img src="" alt="music">
-                <h2>about our company</h2>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel
-                    lacus eget nisi convallis auctor. Nam vitae lectus </p>
-                <span>read more</span>
-            </article>
         </div>
-    </div>
-    <div class="main__container">
-        <main>
+    </header>
+    <main>
+        <div class="mainheader__container">
+            <div class="main__header wrapper">
+                <article class="about__article">
+                    <img src="" alt="wrench">
+                    <h2>about our company</h2>
+                    <p>
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel
+                        lacus eget nisi convallis auctor. Nam vitae lectus
+                    </p>
+                    <span>read more</span>
+                </article>
+                <article class="about__article">
+                    <img src="" alt="chat">
+                    <h2>about our company</h2>
+                    <p>
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel
+                        lacus eget nisi convallis auctor. Nam vitae lectus
+                    </p>
+                    <span>read more</span>
+                </article>
+                <article class="about__article">
+                    <img src="" alt="music">
+                    <h2>about our company</h2>
+                    <p>
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel
+                        lacus eget nisi convallis auctor. Nam vitae lectus
+                    </p>
+                    <span>read more</span>
+                </article>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__content wrapper">
             <div class="main__box">
                 <article class="">
-                    <h2>pingbulLer starts here</h2>\
-                    <!-- dobav skobochki -->
-                    <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere.
+                    <h2>pingbulLer starts <span>here</span></h2>\
+                    <p>
+                        "Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere.
                         Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus,
-                        mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.</p>
+                        mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl."
+                    </p>
                 </article>
                 <form class="" action="index.html" method="post">
                     <input type="radio" name="slider2" value="1">
@@ -87,11 +99,81 @@
             <div class="main__news">
                 <article class="">
                     <h2>recent updates</h2>
-                    
-
+                    <div class="news__block">
+                        <img src="" alt="avatar">
+                        <a href="#" class="news__link">Nunc turpis neque feugiat eget</a>
+                        <p>
+                            Posted by Admin on March 13 2012 in Recent News
+                        </p>
+                    </div>
+                    <div class="news__block">
+                        <img src="" alt="avatar">
+                        <a href="#" class="news__link">Nunc turpis neque feugiat eget</a>
+                        <p>
+                            Posted by Admin on March 13 2012 in Category
+                        </p>
+                    </div>
+                    <div class="news__block">
+                        <img src="" alt="avatar">
+                        <a href="#" class="news__link">Nunc turpis neque feugiat eget</a>
+                        <p>
+                            Posted by Admin on March 13 2012 in Blog Updates
+                        </p>
+                    </div>
+                    <a href="#">read more</a>
                 </article>
             </div>
-        </main>
+            <div class="partners">
+
+            </div>
+        </div>
+        </div>
+        <div class="mainfooter__container">
+            <div class="main__footer wrapper">
+            <article class="">
+                <h2>pingbull<span>er</span></h2>
+                <span>Copyright 2013, Pingbull AS</span>
+                <p>
+                    Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere.
+                    Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pul-
+                </p>
+            </article>
+            <article class="">
+                <a href="#">recent comments</a>
+                <p>
+                    Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere.
+                    Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus,
+                    mattis pulvinar bibendum in, venenatis quis.
+                </p>
+            </article>
+            <article class="">
+                <a href="#">news categories</a>
+                <p>
+                    Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere.
+                    Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus,
+                    mattis pulvinar bibendum in, venenatis quis.
+                </p>
+            </article>
+        </div>
+        </div>
+    </main>
+    <footer>
+    <div class="footer wrapper">
+            <nav>
+                <ul class="menu__footer">
+                    <li class="menu__item"><a href="#" class="menu__link">home</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">about</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">blog</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">products</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">lorem ipsum</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">dolor sit amet</a></li>
+                </ul>
+            </nav>
+            <p>Designed by <span>Pingbull AS</span></p>
+
+
+
+        </footer>
     </div>
 </body>
 </html>
