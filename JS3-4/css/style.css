@@ -1,6 +1,7 @@
 body {
+    margin: 0;
     background-color: darkgrey;
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .wrapper {
@@ -39,6 +40,7 @@ form {
  .form__block {
      display: flex;
      flex-direction: column;
+     width: 90%;
      padding: 10px;
      margin-bottom: 15px;
      border: 2px solid #db36a4;

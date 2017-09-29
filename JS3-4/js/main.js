@@ -39,7 +39,6 @@ var testBlock = {
 
             var label = document.createElement('label');
             label.classList.add('form__item');
-            label.innerHTML = (k + 1) + '.' + this.answer + (k + 1);
             questionBlock.appendChild(label);
 
             var radio = document.createElement('input');
@@ -47,6 +46,11 @@ var testBlock = {
             radio.setAttribute('required', '');
             radio.setAttribute('name', 'radio' + (i + 1));
             label.appendChild(radio);
+
+            var span = document.createElement('span');
+            span.innerHTML = (k + 1) + '.' + this.answer + (k + 1);
+            span.classList.add('form__text');
+            label.appendChild(span);
           }
         }
 
