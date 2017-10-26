@@ -236,11 +236,116 @@
 
 //                                        gwegsegseg
 
-var arr = [1, 2, 3, 4, 5];
-var total = [];
-var nArr = arr.reduce((first, second) => {
-  total.push(first);
-  return first + second;
+// var arr = [1, 2, 3, 4, 5];
+// var total = [];
+// var nArr = arr.reduce((first, second) => {
+//   total.push(first);
+//   return first + second;
+// });
+// total.push(nArr);
+// console.log(total);
+
+//                                         ggggggggg
+
+// let sum = a => b => a + b;
+// console.log(sum(6)(4));
+
+//                                          qqqqqqqq
+
+/*
+function makeBuffer() {
+  let bufferString = '';
+  function buff(value) {
+    if (arguments.length == 0) {
+      return bufferString;
+    } else {
+      bufferString += value;
+    }
+  }
+
+  buff.clear = () => bufferString = '';
+  return buff;
+}
+
+let buffer = makeBuffer();
+buffer('Замыкания');
+buffer(' Использовать');
+buffer(' Нужно!');
+console.log(buffer());
+buffer.clear();
+buffer(1);
+console.log(buffer());
+*/
+
+//                                      qqqqqqqqqq
+
+/*let users = [{
+  name: 'Вася',
+  surname: 'Иванов',
+  age: 20,
+}, {
+  name: 'Петя',
+  surname: 'Чапаев',
+  age: 25,
+}, {
+  name: 'Маша',
+  surname: 'Медведева',
+  age: 18,
+}];
+
+function byField(field) {
+  return function (a, b) {
+    return a[field] > b[field] ? 1 : -1;
+  };
+}
+
+users.sort(byField('name'));
+users.forEach(function (user) {
+  console.log(user.name);
 });
-total.push(nArr);
-console.log(total);
+
+users.sort(byField('age'));
+users.forEach(function (user) {
+  console.log(user.name);
+});
+*/
+
+//                                    filtering array by func
+
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const inBetween = (a, b) => x => (x >= a && x <= b);
+const inArray = arr => x => arr.indexOf(x) != -1;
+const filter = (arr, func) => {
+  let newArr = arr.filter(func);
+  return newArr;
+};
+
+console.log(filter(arr, function (a) {
+  return a % 2 == 0;
+}));
+
+console.log(filter(arr, inBetween(3, 6))); // 3,4,5,6
+console.log(filter(arr, inArray([1, 2, 10]))); // 1,2
+*/
+
+//                                      army of functions
+
+/* need to fix
+function makeArmy() {
+  let shooters = [];
+  for (let i = 0; i < 10; i++) {
+    let shooter = function (i) {
+      alert(i);
+      shooters.push(shooter);
+    };
+
+    return shooters;
+  }
+}
+
+let army = makeArmy();
+
+army[0]();
+army[5]();
+*/
