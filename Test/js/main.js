@@ -330,22 +330,69 @@ console.log(filter(arr, inArray([1, 2, 10]))); // 1,2
 */
 
 //                                      army of functions
-
-/* need to fix
+/*
 function makeArmy() {
   let shooters = [];
   for (let i = 0; i < 10; i++) {
-    let shooter = function (i) {
-      alert(i);
-      shooters.push(shooter);
+    shooters[i] = () => {
+      console.log(i);
     };
-
-    return shooters;
   }
+
+  return shooters;
 }
 
 let army = makeArmy();
-
+console.log(makeArmy());
 army[0]();
 army[5]();
 */
+
+//                                      calculator
+
+/*
+let calculator = {
+  read: function () {
+    this.a = +prompt('Enter the first number');
+    this.b = +prompt('Enter the second number');
+  },
+
+  sum: function () {
+    return this.a + this.b;
+  },
+
+  mul: function () {
+    return this.a * this.b;
+  },
+};
+calculator.read();
+console.log(calculator.sum());
+console.log(calculator.mul());
+*/
+
+//                                    ladder
+
+/*
+let ladder = {
+  step: 0,
+  up: function () {
+    this.step++;
+    return this;
+  },
+
+  down: function () {
+    this.step--;
+    return this;
+  },
+
+  showStep: function () {
+    console.log(this.step);
+    return this;
+  },
+
+};
+
+ladder.up().up().down().up().down().showStep();
+*/
+
+//                                      
