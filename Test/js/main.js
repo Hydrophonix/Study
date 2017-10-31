@@ -395,4 +395,167 @@ let ladder = {
 ladder.up().up().down().up().down().showStep();
 */
 
-//                                      
+//                                      sum2
+
+/*
+function sum(a) {
+  let sumNow = a;
+  function sum2(b) {
+    sumNow += b;
+    return sum2;
+  }
+
+  sum2.toString = () => sumNow;
+  return sum2;
+}
+
+console.log(sum(6)(4)(7)(10));
+*/
+
+//                                     constructor
+
+/*
+function Calculator() {
+  this.read = function () {
+    this.a = +prompt('Enter the first number');
+    this.b = +prompt('Enter the second number');
+  };
+
+  this.sum = function () {
+    return this.a + this.b;
+  },
+
+  this.mul = function () {
+    return this.a * this.b;
+  };
+}
+
+let calc = new Calculator();
+calc.read();
+console.log('Сумма=' + calc.sum());
+console.log('Произведение=' + calc.mul());
+*/
+
+//                                    accumulator
+
+/*
+function Accumulator(startingValue) {
+  this.value = startingValue;
+  this.read = function () {
+    this.value += +prompt('Enter the number');
+  };
+}
+
+let accum = new Accumulator(1);
+accum.read();
+accum.read();
+console.log(accum.value);
+*/
+
+//                                    calculatorPro
+
+/*
+function Calculator() {
+  this['+'] = (a, b) => a + b;
+  this['-'] = (a, b) => a - b;
+  this.calculate = function (str) {
+    this.a = +str.slice(0, str.indexOf(' '));
+    this.b = +str.slice(str.lastIndexOf(' '));
+    this.operator = str.slice(str.indexOf(' ') + 1, str.lastIndexOf(' '));
+    return this[this.operator](this.a, this.b);
+  };
+
+  this.addMethod = function (name, func) {
+    this[name] = func;
+  };
+}
+let proCalc = new Calculator();
+console.log(proCalc.calculate('23 + 45'));
+proCalc.addMethod('*', (a, b) =>  a * b);
+proCalc.addMethod('/', (a, b) =>  a / b);
+proCalc.addMethod('**', (a, b) =>  Math.pow(a, b));
+console.log(proCalc.calculate('2 ** 3'));
+*/
+
+//                                    defineProperties
+
+/*
+function User(fullName) {
+  this.fullName = fullName;
+  Object.defineProperties(this, {
+    firstName: {
+      get: () => this.fullName.split(' ')[0],
+      set: (newFirstName) => this.fullName = newFirstName + ' ' + this.lastName,
+    },
+    lastName: {
+      get: () => this.fullName.split(' ')[1],
+      set: (newLastName) => this.fullName = this.firstName + ' ' + newLastName,
+    },
+  });
+}
+
+let vasya = new User('Vasiliy Pupkin');
+
+console.log(vasya.firstName); // Василий
+console.log(vasya.lastName); // Попкин
+
+// запись в lastName
+vasya.lastName = 'Сидоров';
+
+console.log(vasya.fullName); // Василий Сидоров
+*/
+
+//                                  factoryMethods
+
+/*
+function Article() {
+  this.created = new Date();
+  Article.last = this.created;
+  Article.count++;
+}
+
+Article.count = 0;
+Article.showStats = function () {
+  console.log('last date is ' + this.last + ' from ' + this.count + ' dates');
+};
+
+new Article();
+new Article();
+Article.showStats();
+new Article();
+Article.showStats();
+*/
+
+//                                   call
+
+/*
+function sumArgs() {
+  return [].reduce.call(arguments, (a, b) =>a + b);
+}
+
+let test = sumArgs(1, 2, 3);
+console.log(test);
+*/
+
+//                                   apply
+
+/*
+function sum() {
+  return [].reduce.call(arguments, (a, b) => a + b);
+}
+
+function mul() {
+  return [].reduce.call(arguments, (a, b) => a * b);
+}
+
+function applyAll(func) {
+  return func.apply(this, [].slice.call(arguments, 1));
+}
+
+console.log(applyAll(sum, 1, 2, 3));
+console.log(applyAll(mul, 2, 3, 4));
+console.log(applyAll(Math.max, 2, -2, 3));
+console.log(applyAll(Math.min, 2, -2, 3));
+*/
+
+//                                    
