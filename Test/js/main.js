@@ -558,4 +558,93 @@ console.log(applyAll(Math.max, 2, -2, 3));
 console.log(applyAll(Math.min, 2, -2, 3));
 */
 
-//                                    
+//                                    time
+
+/*
+function printNumbersInterval() {
+  let number = 1;
+  let timerId = setInterval(function () {
+    console.log(number);
+    if (number == 20) clearInterval(timerId);
+    number++;
+  }, 100);
+}
+
+printNumbersInterval();
+*/
+
+//                                    loging decorator
+
+/*
+function work(a) {
+  console.log(a * 2);
+}
+
+let logs = [];
+function makeLogging(f, log) {
+  return function () {
+    log.push(arguments[0]);
+    return f.apply(this, arguments);
+  };
+}
+
+let works = makeLogging(work, logs);
+works(1);
+works(5);
+
+console.log(logs);
+*/
+
+//                                  logging decorator 2
+
+/*
+function work(a, b) {
+  console.log(a + b);
+}
+
+let logs2 = [];
+let logs = [];
+function makeLogging(f, log, log2) {
+  return function () {
+    [].forEach.call(arguments, item => log.push(item));
+    log2.push([].slice.call(arguments));
+    return f.apply(this, arguments);
+  };
+}
+
+let works = makeLogging(work, logs, logs2);
+works(1, 2);
+works(5, 3);
+works(11, 44);
+
+console.log(logs);
+logs2.forEach(i => console.log(i.join(',')));
+*/
+
+//                                  caching decorator
+
+/*
+function f(x) {
+  return Math.random() * x;
+}
+
+function makeCaching(f) {
+  let results = {};
+  return function (x) {
+    if (!(x in results)) {
+      results[x] = f.call(this, x);
+    }
+
+    return results[x];
+  };
+}
+
+let fu = makeCaching(f);
+let a = fu(1);
+let b = fu(1);
+console.log(a == b);
+b = fu(2);
+console.log(a == b);
+*/
+
+//                                  delay decorator
