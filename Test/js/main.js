@@ -647,4 +647,112 @@ b = fu(2);
 console.log(a == b);
 */
 
-//                                  delay decorator
+//                                  polymorph function
+
+/*
+const formatDate = date => {
+  const OPTIONS = {
+    day: '2-digit',
+    month: '2-digit',
+    year: '2-digit',
+  };
+  switch ({}.toString.call(date).slice(8, -1)) {
+    case 'String':
+      return new Date(date).toLocaleString('ru', OPTIONS);
+    case 'Number':
+      return new Date(date * 1000).toLocaleString('ru', OPTIONS);
+    case 'Array':
+      return new Date(date[0], date[1], date[2]).toLocaleString('ru', OPTIONS);
+    case 'Date':
+      return date.toLocaleString('ru', OPTIONS);
+    default:
+      return 'Something went wrong';
+  }
+};
+
+console.log('Date is: ' + formatDate('2011-10-02'));
+console.log('Date is: ' + formatDate(1234567890));
+console.log('Date is: ' + formatDate([2014, 0, 1]));
+console.log('Date is: ' + formatDate(new Date(2014, 0, 1)));
+
+// var 2
+
+const formatDate2 = date => {
+  const type = {}.toString.call(date).slice(8, -1);
+  const options = new Intl.DateTimeFormat('ru', {
+    year: '2-digit',
+    month: '2-digit',
+    day: '2-digit',
+  });
+  const functions = {
+    String: x => new Date(x),
+    Number: x =>  new Date(x * 1000),
+    Array: (args) =>  new Date(...args),
+    Date: x => x,
+  };
+
+  return options.format(functions[type](date));
+};
+
+console.log('Date is: ' + formatDate2('2011-10-02'));
+console.log('Date is: ' + formatDate2(1234567890));
+console.log('Date is: ' + formatDate2([2014, 0, 1]));
+console.log('Date is: ' + formatDate2(new Date(2014, 0, 1)));
+*/
+
+//                                  JSON
+
+/*
+let leader = {
+  name: 'Василий Иванович',
+  age: 35,
+};
+
+let jsonStr = JSON.stringify(leader);
+console.log(jsonStr);
+let normalStr = JSON.parse(jsonStr);
+console.log(normalStr);
+*/
+
+//                                  timeDecorator
+
+/*
+const work = x => console.log(x + ' seconds');
+const delay = (func, msDelay) => function () {
+    let _this = this;
+    let args = arguments;
+    setTimeout(function () {
+      func.apply(_this, args); }, msDelay);
+  };
+
+delay(work, 2000)(2);
+delay(work, 3000)(3);
+*/
+
+//                                   debounce
+
+/*
+const work = x => console.log(x);
+const debounce = (f, ms) => {
+  let state = null;
+  const COOLDOWN = 1;
+
+  return function () {
+    if (state) return;
+    f.apply(this, arguments);
+    state = COOLDOWN;
+    setTimeout(function () { state = null; }, ms);
+  };
+
+};
+
+let f = debounce(work, 1000);
+
+f(1);
+f(2);
+setTimeout(() => f(3), 100);
+setTimeout(() => f(4), 1100);
+setTimeout(() => f(5), 1500);
+*/
+
+//                                    OOP
