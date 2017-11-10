@@ -756,3 +756,130 @@ setTimeout(() => f(5), 1500);
 */
 
 //                                    OOP
+
+/*
+function User() {
+  let firstName;
+  let surname;
+  this.setFirstName = name => firstName = name;
+  this.setSurname = name => surname = name;
+  this.getFullName = () => firstName + ' ' + surname;
+}
+
+const userok = new User();
+userok.setFirstName('Vasyan');
+userok.setSurname('LOLpro');
+console.log(userok.getFullName());
+*/
+
+//                                    coffeMachine
+
+/*
+function Machine(power) {
+  this._enabled = false;
+  this._power = power;
+  this.enable = () => this._enabled = true;
+  this.disable = () => this._enabled = false;
+}
+
+function CoffeMachine(power, capacity) {
+  Machine.call(this, arguments[0]);
+  let waterAmount = 0;
+  let onReady = () => console.log('Кофе готов!');
+  let timerId;
+  const WATER_HEAT_CAPACITY = 4200;
+  const BOIL_TIME = () => (waterAmount * WATER_HEAT_CAPACITY * 80 / this._power);
+  const disableProtected = this.disable;
+  this.disable = () => {
+    clearTimeout(timerId);
+    disableProtected.call(this);
+  };
+
+  this.setWaterAmount = amount => {
+    if (amount < 0) {
+      throw new Error('Значение должно быть положительным');
+    }
+
+    if (amount > capacity) {
+      throw new Error('Нельзя залить воды больше, чем ' + capacity);
+    }
+
+    waterAmount = amount;
+  };
+
+  this.getWaterAmount = () => waterAmount;
+  this.getPower = () => this._power;
+  this.run = () => !this._enabled ? console.log('Кофеварка выключена' + this._enabled)
+    : (timerId = setTimeout(() => onReady(), BOIL_TIME()));
+  this.addWater = amount => this.setWaterAmount(waterAmount + amount);
+  this.setOnReady = newOnReady => onReady = newOnReady;
+  this.isRunning = () => !!timerId;
+}
+
+const kafei = new CoffeMachine(100000, 2500);
+
+kafei.setWaterAmount(1750);
+console.log(kafei.getPower());
+
+// kafei.addWater(250);
+// kafei.setOnReady(function () {
+  // var amount = kafei.getWaterAmount();
+  // alert('Готов кофе: ' + amount + 'мл');
+// });
+
+// kafei.run();
+// console.log(kafei.isRunning());
+
+const machine = new Machine(2);
+kafei.run();
+machine.enable();
+console.log(machine._enabled);
+kafei.enable();
+console.log(kafei._enabled);
+kafei.run();
+kafei.disable();
+console.log(kafei._enabled);
+*/
+
+//                                      fridge
+
+function Machine(power) {
+  this._enabled = false;
+  this._power = power;
+  this.enable = () => this._enabled = true;
+  this.disable = () => this._enabled = false;
+}
+
+function Fridge(power) {
+  Machine.call(this, arguments[0]);
+  let food = [];
+  this.addFood = () => !this._enabled ?
+  console.log('Fridge is disabled. Please switch on' + arguments[0]) :
+  ((this._power / 100) > food.length + arguments.length) ?
+  (food = food.concat([].slice.call(arguments[0]))) :
+  console.log('Too much items' + arguments.length);
+  this.getFood = () => food.slice();
+}
+
+const fridge = new Fridge(500);
+
+// fridge.enable();
+
+fridge.addFood({
+  title: 'котлета',
+  calories: 100,
+});
+fridge.addFood({
+  title: 'сок',
+  calories: 30,
+});
+fridge.addFood({
+  title: 'зелень',
+  calories: 10,
+});
+fridge.addFood({
+  title: 'варенье',
+  calories: 150,
+});
+
+console.log(fridge.getFood());
