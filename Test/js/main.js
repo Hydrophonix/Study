@@ -843,6 +843,7 @@ console.log(kafei._enabled);
 
 //                                      fridge
 
+/*
 function Machine(power) {
   this._enabled = false;
   this._power = power;
@@ -852,18 +853,30 @@ function Machine(power) {
 
 function Fridge(power) {
   Machine.call(this, arguments[0]);
+  let _disable = this.disable;
   let food = [];
-  this.addFood = () => !this._enabled ?
-  console.log('Fridge is disabled. Please switch on' + arguments[0]) :
-  ((this._power / 100) > food.length + arguments.length) ?
-  (food = food.concat([].slice.call(arguments[0]))) :
-  console.log('Too much items' + arguments.length);
+  this.disable = () => food.length ? console.log('cant off with food') : _disable();
+  this.addFood = function () {
+    !this._enabled ?
+    console.log('Fridge is disabled. Please switch on' + arguments) :
+    ((this._power / 100) > food.length + arguments.length) ?
+    (food = food.concat([].slice.call(arguments))) :
+    console.log('Too much items');
+  };
+
+  this.filterFood = function (filter) {
+    return food.filter(filter);
+  };
+
   this.getFood = () => food.slice();
+  this.removeFood = item => food.indexOf(item) ?
+  food.splice(food.indexOf(item), 1) :
+  console.log('there is no this item');
 }
 
 const fridge = new Fridge(500);
 
-// fridge.enable();
+fridge.enable();
 
 fridge.addFood({
   title: 'котлета',
@@ -882,4 +895,76 @@ fridge.addFood({
   calories: 150,
 });
 
+console.log(fridge.getFood().length);
+
+let dietItems = fridge.filterFood(function (item) {
+  return item.calories < 50;
+});
+
+dietItems.forEach(function (item) {
+  console.log(item.title);
+  fridge.removeFood(item);
+});
+
 console.log(fridge.getFood());
+fridge.disable();
+*/
+
+//                                            prototype
+
+/*
+function CoffeeMachine(power) {
+  this._waterAmount = 0;
+  this._power = power;
+  CoffeeMachine.prototype.WATER_HEAT_CAPACITY = 4200;
+
+  CoffeeMachine.prototype.getTimeToBoil = () =>
+  this._waterAmount * this.WATER_HEAT_CAPACITY * 80 / this._power;
+
+  CoffeeMachine.prototype.run = () =>
+  setTimeout(() => console.log('Кофе готов!'), this.getTimeToBoil());
+
+  CoffeeMachine.prototype.setWaterAmount = amount => this._waterAmount = amount;
+}
+
+const coffeeMachine = new CoffeeMachine(10000);
+coffeeMachine.setWaterAmount(50);
+coffeeMachine.run();
+*/
+
+//                                            clockProto
+
+function Clock(options) {
+  this._template = options.template;
+}
+
+Clock.prototype._render = function () {
+  let date = new Date();
+
+  let hours = date.getHours();
+  if (hours < 10) hours = '0' + hours;
+
+  let min = date.getMinutes();
+  if (min < 10) min = '0' + min;
+
+  let sec = date.getSeconds();
+  if (sec < 10) sec = '0' + sec;
+
+  const output = this._template.replace('h', hours).replace('m', min).replace('s', sec);
+
+  console.log(output);
+};
+
+Clock.prototype.start = function () {
+  this._render();
+  const _this = this;
+  this._timer = setInterval(() => _this._render, 1000);
+};
+
+Clock.prototype.stop = function () { clearInterval(this._timer); };
+
+const clock = new Clock({
+  template: 'h:m:s',
+});
+
+clock.start();
