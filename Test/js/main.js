@@ -932,6 +932,18 @@ coffeeMachine.setWaterAmount(50);
 coffeeMachine.run();
 */
 
+//                                        hadlebarsshit
+
+// const newArr = data.reduce((gStr, item, i) => {
+//   gStr = gStr + '<tr>';
+//   for (let prop in item) {
+//     gStr += `<td>${item[prop]}</td>`;
+//   };
+//   gStr += '</tr>';
+//
+//   return gStr;
+// }, '')
+
 //                                            clockProto
 
 function Clock(options) {
