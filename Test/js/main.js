@@ -946,7 +946,7 @@ coffeeMachine.run();
 
 //                                            clockProto
 
-function Clock(options) {
+/*function Clock(options) {
   this._template = options.template;
 }
 
@@ -980,3 +980,4 @@ const clock = new Clock({
 });
 
 clock.start();
+*/
