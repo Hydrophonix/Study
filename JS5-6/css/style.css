@@ -1,16 +1,28 @@
+@font-face {
+  font-family: 'Digital';
+  src: url('../fonts/digital.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    margin: 0;
-    background: #090d00;
+  margin: 0;
+  background: #090d00;
 }
 
 header {
   padding-top: 20px;
 }
+
 main {
-    width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
+
 footer {
   display: flex;
   justify-content: flex-end;
@@ -18,9 +30,11 @@ footer {
   margin: 0 auto;
   padding: 20px 0;
 }
+
 .author {
   color: white;
 }
+
 .fancy-text {
   background-color: rgba(20, 20, 20, 1);
   margin: 0 auto 20px;
@@ -28,85 +42,102 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-	border: 4px double rgba(255,255,255,.25);
-	border-width: 4px 0;
+  border: 4px double rgba(255, 255, 255, .25);
+  border-width: 4px 0;
   border-radius: 25px;
-  box-shadow: 0px 0px 100px -40px rgba(255,255,255,1);
-
-
+  box-shadow: 0px 0px 100px -40px rgba(255, 255, 255, 1);
 }
+
 .fancy-text span {
   letter-spacing: .5em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   font: 700 4em/1 "Oswald", sans-serif;
   letter-spacing: 0;
   padding: .25em 0 .325em;
   display: block;
   margin: 0 auto;
-  text-shadow: 0 0 80px rgba(255,255,255,.5);
+  text-shadow: 0 0 80px rgba(255, 255, 255, .5);
   background: url(../img/bg.png);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: aitf 1s linear infinite;
-  /*-webkit-transform: translate3d(0,0,0);*/
-  /*-webkit-backface-visibility: hidden;*/
-
 }
-/* Animate Background Image */
 
 @-webkit-keyframes aitf {
-	0% { background-position: 0% 50%; }
-	100% { background-position: 100% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
-.test {
-  background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-  box-shadow: none;
-}
-
-.testpro:hover {
-  background: linear-gradient(to top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
-  box-shadow: 0px 0px 15px 2px rgba(255,255,255,1)
-}
-
-.timer {
-
+#timer {
+  font-family: 'Digital', monospace;
+  padding: 5px 20px 40px;
+  display: flex;
+  width: 700px;
+  justify-content: center;
+  color: white;
+  font-size: 80px;
+  letter-spacing: 3px;
 }
 
 .buttons {
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  width: 800px;
 }
+
 .buttons button {
   display: block;
   width: 260px;
   height: 60px;
-  background-color: grey;
+  background: grey;
   border: none;
+  outline: none;
   font: 700 40px "Oswald", sans-serif;
   text-transform: uppercase;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-.start {
+
+#start {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-.buttons button:hover {
-  background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
-  box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
-  transition-duration: background 2s;
-  transition-duration: box-shadow 2s;  
+
+.buttons button:hover,
+.buttons > .active {
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 1);
 }
+
 .buttons button:active {
-  background: linear-gradient(to top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+  background: linear-gradient(to top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
 }
+
 .buttons button:focus {
   border: 2px solid #ee5100;
 }
-.reset {
+
+#reset {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+#display {
+  display: block;
+  width: 500;
+  text-align: center;
+}
+
+#splits div {
+  width: 365px;
+  height: 40px;
+  text-align: right;
+  color: white;
+  font-family: 'Digital', monospace;
+  font-size: 40px;
 }
